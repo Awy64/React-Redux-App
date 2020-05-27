@@ -1,6 +1,7 @@
 import React, {useEffect} from "react"
 import {connect} from "react-redux"
 import {getCharacters} from "../store/actions/actions"
+import '../styles/main.css'
 
 const RenderCharacters = props => {
 
@@ -10,7 +11,7 @@ const RenderCharacters = props => {
   }, []);
 
   return(
-  <div>
+  <div className={'characterContainer'}>
   <h1>Character List</h1>
   {props.isFetching && <h1>... Loading</h1>}
   {props.errors && <h1>{props.errors}</h1>}
