@@ -1,6 +1,6 @@
 const initialState = {
   characters: [],
-  isFeatching: false,
+  isFetching: false,
   errors: "",
 };
 
@@ -9,7 +9,7 @@ export const reducer = (state = initialState, action) => {
     default:
       return state;
     case "FETCH_CHARACTER_START":
-      return {...state, isFeatching: true, characters: [], errors: ""}
+      return {...state, isFetching: true, characters: [], errors: ""}
     case "FETCH_CHARACTER_SUCCESS":
       return {
         ...state,
@@ -20,7 +20,7 @@ export const reducer = (state = initialState, action) => {
     case "FETCH_CHARACTER_FALURE":
       return {
         ...state,
-        isFeatching: false,
+        isFetching: false,
         characters: [],
         errors: action.payload,
       };
